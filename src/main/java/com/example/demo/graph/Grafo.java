@@ -19,6 +19,17 @@ public class Grafo {
     }
 
     public Set<No> getTodosOsNos() {
-        return adjacencias.keySet();
+        Set<No> todoNos = new HashSet<>(adjacencias.keySet());
+
+        for (List<Aresta> arestas : adjacencias.values()) {
+
+            for (Aresta a : arestas) {
+                todoNos.add(a.getDestino());
+
+            }
+        }
+
+        return todoNos;
     }
+
 }

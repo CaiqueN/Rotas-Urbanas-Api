@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Aresta {
 
     private No origem;
@@ -16,4 +16,12 @@ public class Aresta {
     private double distancia;
     private String tipoTransporte;
 
+    public Aresta(No origem, No destino, double tempo, double custo, String tipoTransporte) {
+        this.origem = origem;
+        this.destino = destino;
+        this.tempo = tempo;
+        this.custo = custo;
+        this.tipoTransporte = tipoTransporte;
+        this.distancia = 0;
+    }
 }
