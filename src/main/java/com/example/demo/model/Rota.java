@@ -1,12 +1,12 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
+@Getter
+@Setter
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,4 +30,5 @@ public class Rota {
         this.custoTotal = custo;
         this.distanciaTotal = distancia;
     }
+
 }

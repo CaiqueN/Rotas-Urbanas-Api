@@ -1,16 +1,28 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Aresta {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "origem_id")
     private No origem;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "destino_id")
     private No destino;
+
     private double tempo;
     private double custo;
     private double distancia;

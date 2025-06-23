@@ -2,9 +2,11 @@ package com.example.demo.graph;
 
 import com.example.demo.model.Aresta;
 import com.example.demo.model.No;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+@Component
 public class Grafo {
     private Map<No, List<Aresta>> adjacencias = new HashMap<>();
 
